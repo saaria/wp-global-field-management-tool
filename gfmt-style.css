@@ -1,0 +1,115 @@
+.gfmt-wrap table {
+    width: 100%;
+    margin: 2rem 0;
+    border-collapse: collapse;
+}
+.gfmt-wrap table .draggable {
+    cursor: grab;
+}
+.gfmt-wrap table .draggable:active {
+    cursor: grabbing;
+}
+.gfmt-wrap table .over {
+    background-color: #f0f0f0;
+}
+/* Style to reduce opacity */
+.gfmt-wrap table .transparent {
+    opacity: 0.5;
+}
+/* Dynamic border styles for indicating drop location */
+.gfmt-wrap table .drop-above {
+    border-top: 1px dotted #333;
+}
+.gfmt-wrap table .drop-below {
+    border-bottom: 1px dotted #333;
+}
+.gfmt-wrap tr {
+    border-bottom: 0px solid #777;
+}
+.gfmt-wrap th {
+    text-align: left;
+}
+.gfmt-wrap th:nth-of-type(1) {
+    width: 70px;
+}
+.gfmt-wrap th:nth-of-type(2) {
+    width: 140px;
+}
+.gfmt-wrap th:nth-of-type(3) {
+    width: 30%;
+}
+.gfmt-wrap th:nth-of-type(4) {
+    width: auto;
+}
+.gfmt-wrap th:nth-of-type(5) {
+    width: 100px;
+}
+.gfmt-wrap td {
+    text-align: center;
+    padding-right: 0.5rem;
+    padding-top: 0.5rem;
+}
+.gfmt-wrap td input[type="text"] {
+    width: 100%;
+}
+.gfmt-wrap td input[readonly] {
+    background-color: #ccc;
+}
+.gfmt-wrap td:nth-of-type(1) span {
+    display: inline-block;
+    width: 100%;
+}
+.gfmt-wrap .toggle-button {
+    display: inline-block;
+    position: relative;
+    width: 60px;
+    height: 30px;
+    border-radius: 50px;
+    background-color: #dddddd;
+    cursor: pointer;
+    transition: background-color .4s;
+}
+.gfmt-wrap .toggle-button:has(:checked) {
+    background-color: #4bd865;
+}
+.gfmt-wrap .toggle-button::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    box-shadow: 0 0 5px rgb(0 0 0 / 20%);
+    background-color: #fff;
+    content: '';
+    transition: left .4s;
+}
+.gfmt-wrap .toggle-button:has(:checked)::after {
+    left: 30px;
+}
+.gfmt-wrap .toggle-button input {
+    display: none;
+}
+.gfmt-wrap .gfmt-wrap__buttons {
+    display: flex;
+}
+.gfmt-wrap .gfmt-wrap__buttons--left {
+    justify-content: start;
+}
+.gfmt-wrap .gfmt-wrap__buttons--right {
+    justify-content: end;
+}
+.gfmt-wrap .gfmt-wrap__buttons button {
+    margin-right: 0.5rem;
+}
+@media screen and (max-width: 782px) {
+    .gfmt-wrap td {
+        text-align: left;
+    }
+    .gfmt-wrap th {
+        width: 100%;
+    }
+    .gfmt-wrap td input {
+        width: 100%;
+    }
+}
