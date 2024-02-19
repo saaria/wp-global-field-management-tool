@@ -35,7 +35,7 @@ class GlobalFieldManaTool {
 
     public function set_plugin_menu() {
         add_menu_page(
-            'Global field management-tool', // page title
+            'Global field management tool', // page title
             'Global field Management tool', // menu title
             'manage_options',               // menu privilege
             GFMT_PLUGIN_ID,                 // menu slug

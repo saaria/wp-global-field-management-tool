@@ -2,7 +2,7 @@
 
 include_once plugin_dir_path( __FILE__ ).'/../include/constants.php';
 
-function gfmt_get_field($field_slug) {
+function gfmt_get_field(string $field_slug): string {
     $data = get_option(GFMT_DATA_DB_COLUMN_NAME, [''=>'']);
     
     /*
@@ -27,7 +27,7 @@ function gfmt_get_field($field_slug) {
     return esc_html($returnValue);
 }
 
-function gfmt_get_field_shortcode($atts) {
+function gfmt_get_field_shortcode(array $atts): string {
     $atts = shortcode_atts([
         "field_name" => '',
     ], $atts);
