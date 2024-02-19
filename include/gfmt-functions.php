@@ -2,7 +2,7 @@
 
 include_once plugin_dir_path( __FILE__ ).'/../include/constants.php';
 
-function gfmt_get_field(string $field_slug): string {
+function gfmt_get_field(string $field_name): string {
     $data = get_option(GFMT_DATA_DB_COLUMN_NAME, [''=>'']);
     
     /*
@@ -17,7 +17,7 @@ function gfmt_get_field(string $field_slug): string {
     if (is_array($data)) {
         for ($index = 0; $index < count($data); $index++) {
             foreach ($data[$index] as $key => $value) {
-                if ($key === $field_slug) {
+                if ($key === $field_name) {
                     $returnValue = $value;
                     break;
                 }
